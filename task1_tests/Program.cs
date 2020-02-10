@@ -1,12 +1,24 @@
-﻿using System;
+﻿using Xunit;
 
-namespace task1_tests
+namespace MyFirstUnitTests
 {
-    class Program
+    public class task1_tests
     {
-        static void Main(string[] args)
+        [Fact]
+        public void PassingTest()
         {
-            Console.WriteLine("Hello World!");
+            Assert.Equal(4, Add(2, 2));
+        }
+
+        [Fact]
+        public void FailingTest()
+        {
+            Assert.Equal(5, Add(2, 2));
+        }
+
+        int Add(int x, int y)
+        {
+            return x + y;
         }
     }
 }
