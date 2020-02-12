@@ -1,8 +1,8 @@
 ﻿using Xunit;
 
-namespace MyFirstUnitTests
+namespace Task1Tests
 {
-    public class task1_tests
+    public class ReadingMapTests
     {
         [Fact]
         public void PassingTest()

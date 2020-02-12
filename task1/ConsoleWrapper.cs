@@ -1,38 +1,32 @@
 ﻿using System;
+using System.Collections.Generic;
+using System.Text;
 
 namespace task1
 {
-    class Program
+    public class ConsoleWrapper
     {
-        private string screenshot =
-@"0123456789012345678~01234567890123456789
-1                  ~                   #
-2                  ~                   #
-3                  ~                   #
-4                  ~                   #
-5   @@@@@@    %%%%%#%%                 #
-6   @@@@@@%%%%     ~  %%               #
-7   @@@@@@         ~    %%             #
-8                   ~     %%           #
-9                    ~      %%         #
-0                     ~       %%       #
-1                      ~        %%+    #
-2                     ~                #
-3                    ~                 #
-4                   ~                  #
-5               ~~~~                   #
-6              ~                       #
-7             ~                        #
-8            ~                         #
-9###########~###########################";
-
-        static void Main(string[] args)
-        {
-            Console.BackgroundColor = System.ConsoleColor.White;
-            Console.WriteLine("Hello World!");
-
-            Console.WriteLine("Select map, for example 'Map7.txt'");
-        }
+        private string defaultTheme =
+@"0123456789012345678901234567890123456789
+1                                      #
+2                                      #
+3                                      #
+4                                      #
+5                                      #
+6                                      #
+7                                      #
+8                                      #
+9                                      #
+0                                      #
+1                                      #
+2                                      #
+3                                      #
+4                                      #
+5                                      #
+6                                      #
+7                                      #
+8                                      #
+9#######################################";
 
         public void SetupConsoleWindow(int rows, int columns)
         {
@@ -57,7 +51,7 @@ namespace task1
 
             // Мы можем выводить строку на экран, без перевода курсора на следующую строку методом Write
             Console.SetCursorPosition(0, 0); // Так можно задать позицию курсора - с этого места начнётся
-            // вывод на консоль следующей командой .Write**
+                                             // вывод на консоль следующей командой .Write**
             Console.Write(screenshot);
 
             // Статические методы класса Math могут пригодится для решения первого задания.
