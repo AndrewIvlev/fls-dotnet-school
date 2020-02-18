@@ -1,6 +1,6 @@
 ﻿using System;
 using System.Collections.Generic;
-using System.Text;
+using System.Text;  
 
 namespace task1
 {
@@ -52,7 +52,7 @@ namespace task1
             // Мы можем выводить строку на экран, без перевода курсора на следующую строку методом Write
             Console.SetCursorPosition(0, 0); // Так можно задать позицию курсора - с этого места начнётся
                                              // вывод на консоль следующей командой .Write**
-            Console.Write(screenshot);
+            Console.Write(defaultTheme);
 
             // Статические методы класса Math могут пригодится для решения первого задания.
             // Так можно округлить число с плавающей точкой до целого по правилам арифметического округления.
