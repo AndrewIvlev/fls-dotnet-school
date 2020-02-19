@@ -8,18 +8,20 @@ namespace task1
     {
         static void Main(string[] args)
         {
-            const string PathToFileWithMap = "TestData\\Map7.txt";
-            const int MaxCountOfLinesInFileMap = 1024;
+            const string pathToFileWithMap = "TestData\\Map7.txt";
+            const int maxCountOfLinesInFileMap = 1024;
             
             var stringArrayFromFile = MapFileReader.ReadFromFile(
-                Path.Combine(Environment.CurrentDirectory, PathToFileWithMap),
-                MaxCountOfLinesInFileMap);
+                Path.Combine(Environment.CurrentDirectory, pathToFileWithMap),
+                maxCountOfLinesInFileMap);
             var treasureMap = new TreasureMap(stringArrayFromFile);
 
-            var console = new ConsoleWrapper();
-            console.SetupConsoleWindow(treasureMap.Width, treasureMap.Height);
+            var painter = new MapPainter();
+            painter.SetupConsoleWindow(treasureMap.Width + 3, treasureMap.Height + 3);
 
-            //console.ShowTreasureMap(treasureMap.ToString());
+            painter.DrawMap(treasureMap);
+
+            Console.ReadKey();
         }
     }
 }
